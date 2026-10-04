@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+venv/
+__pycache__/
+*.pyc
+qa_log.md
+output/
+tool_calls.log
+change_audit.log

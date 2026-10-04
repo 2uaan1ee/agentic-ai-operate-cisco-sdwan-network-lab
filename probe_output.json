@@ -1,0 +1,820 @@
+{
+  "api": {
+    "edge_names": [
+      "dc-cedge01",
+      "site1-cedge01",
+      "site2-cedge01",
+      "site3-vedge01"
+    ],
+    "/dataservice/template/policy/vsmart": {
+      "count": 1,
+      "keys": [
+        "@rid",
+        "createdBy",
+        "createdOn",
+        "isPolicyActivated",
+        "lastUpdatedBy",
+        "lastUpdatedOn",
+        "policyDefinition",
+        "policyDescription",
+        "policyId",
+        "policyName",
+        "policyType",
+        "policyVersion"
+      ],
+      "sample": {
+        "policyVersion": "05082020T202813288",
+        "lastUpdatedBy": "admin",
+        "policyName": "Corp-vSmart-Policy",
+        "policyDefinition": "{\"assembly\":[{\"type\":\"appRoute\",\"entries\":[{\"siteLists\":[\"6b87c4d9-a695-40bf-82dd-fba50ec86d50\"],\"vpnLists\":[\"0d70b030-ccd6-4350-81c8-6460f3d34b03\"]}],\"definitionId\":\"fbef9dbe-18de-442a-af74-19926492047c\"},{\"type\":\"hubAndSpoke\",\"definitionId\":\"b47279e5-9dea-4549-9354-5d4070038485\"}]}",
+        "createdOn": 1588969693288,
+        "isPolicyActivated": false,
+        "policyDescription": "Corp-vSmart-Policy",
+        "@rid": 274,
+        "policyId": "7c66e380-d962-4479-b9a3-a22ba40ea1be",
+        "createdBy": "admin",
+        "policyType": "feature",
+        "lastUpdatedOn": 1588969693288
+      }
+    },
+    "/dataservice/template/policy/definition/approute": {
+      "count": 1,
+      "keys": [
+        "definitionId",
+        "description",
+        "infoTag",
+        "lastUpdated",
+        "mode",
+        "name",
+        "owner",
+        "referenceCount",
+        "references",
+        "type"
+      ],
+      "sample": {
+        "name": "Outlook-AAR-Policy",
+        "definitionId": "fbef9dbe-18de-442a-af74-19926492047c",
+        "type": "appRoute",
+        "description": "Outlook-AAR-Policy",
+        "owner": "admin",
+        "lastUpdated": 1588969689516,
+        "infoTag": "",
+        "mode": "security",
+        "referenceCount": 1,
+        "references": [
+          {
+            "id": "7c66e380-d962-4479-b9a3-a22ba40ea1be",
+            "property": "policyId"
+          }
+        ]
+      }
+    },
+    "/dataservice/template/policy/list/sla": {
+      "count": 9,
+      "keys": [
+        "description",
+        "entries",
+        "infoTag",
+        "isActivatedByVsmart",
+        "lastUpdated",
+        "listId",
+        "name",
+        "owner",
+        "readOnly",
+        "referenceCount",
+        "references",
+        "type",
+        "version"
+      ],
+      "sample": {
+        "listId": "f2756743-a7e6-4ad0-a8b8-944d987f58c1",
+        "name": "Best-Effort",
+        "type": "sla",
+        "description": "Best Effort SLA",
+        "entries": [
+          {
+            "jitter": "500",
+            "latency": "500",
+            "loss": "5"
+          }
+        ],
+        "lastUpdated": 1630931986297,
+        "owner": "system",
+        "readOnly": false,
+        "version": "1.0",
+        "infoTag": "",
+        "referenceCount": 0,
+        "references": [],
+        "isActivatedByVsmart": false
+      }
+    },
+    "/dataservice/template/policy/list/dataprefix": {
+      "count": 0,
+      "keys": [],
+      "sample": null
+    },
+    "/dataservice/template/policy/list/site": {
+      "count": 2,
+      "keys": [
+        "description",
+        "entries",
+        "infoTag",
+        "isActivatedByVsmart",
+        "lastUpdated",
+        "listId",
+        "name",
+        "owner",
+        "readOnly",
+        "referenceCount",
+        "references",
+        "type",
+        "version"
+      ],
+      "sample": {
+        "listId": "28146fa9-fb35-4769-b2cf-df67bbaf44b0",
+        "name": "Hub-list",
+        "type": "site",
+        "description": "Desc Not Required",
+        "entries": [
+          {
+            "siteId": "100"
+          }
+        ],
+        "lastUpdated": 1588969687476,
+        "owner": "admin",
+        "readOnly": false,
+        "version": "0",
+        "infoTag": "",
+        "referenceCount": 1,
+        "references": [
+          {
+            "id": "b47279e5-9dea-4549-9354-5d4070038485",
+            "type": "hubAndSpoke"
+          }
+        ],
+        "isActivatedByVsmart": false
+      }
+    },
+    "/dataservice/template/policy/list/vpn": {
+      "count": 1,
+      "keys": [
+        "description",
+        "entries",
+        "infoTag",
+        "isActivatedByVsmart",
+        "lastUpdated",
+        "listId",
+        "name",
+        "owner",
+        "readOnly",
+        "referenceCount",
+        "references",
+        "type",
+        "version"
+      ],
+      "sample": {
+        "listId": "0d70b030-ccd6-4350-81c8-6460f3d34b03",
+        "name": "Corp-VPN-List",
+        "type": "vpn",
+        "description": "Desc Not Required",
+        "entries": [
+          {
+            "vpn": "1"
+          }
+        ],
+        "lastUpdated": 1588969686927,
+        "owner": "admin",
+        "readOnly": false,
+        "version": "0",
+        "infoTag": "",
+        "referenceCount": 2,
+        "references": [
+          {
+            "id": "7c66e380-d962-4479-b9a3-a22ba40ea1be",
+            "type": ""
+          },
+          {
+            "id": "b47279e5-9dea-4549-9354-5d4070038485",
+            "type": "hubAndSpoke"
+          }
+        ],
+        "isActivatedByVsmart": false
+      }
+    },
+    "/dataservice/device/app-route/statistics?deviceId=10.10.1.11": {
+      "count": 72,
+      "keys": [
+        "app-probe-class",
+        "average-jitter",
+        "average-latency",
+        "dst-ip",
+        "dst-port",
+        "fallback-sla-class-index",
+        "index",
+        "ipv6-rx-data-pkts",
+        "ipv6-tx-data-pkts",
+        "lastupdated",
+        "local-color",
+        "loss",
+        "mean-jitter",
+        "mean-latency",
+        "mean-loss",
+        "proto",
+        "remote-color",
+        "remote-system-ip",
+        "rx-data-pkts",
+        "sla-class-index",
+        "src-ip",
+        "src-port",
+        "total-packets",
+        "tx-data-pkts",
+        "vdevice-dataKey",
+        "vdevice-host-name",
+        "vdevice-name"
+      ],
+      "sample": {
+        "src-ip": "10.10.23.6",
+        "dst-ip": "10.10.23.10",
+        "tx-data-pkts": "0",
+        "vdevice-name": "10.10.1.11",
+        "src-port": 12346,
+        "dst-port": "12346",
+        "remote-color": "mpls",
+        "remote-system-ip": "10.10.1.13",
+        "fallback-sla-class-index": "None",
+        "mean-latency": 0,
+        "total-packets": "386",
+        "loss": "0",
+        "mean-jitter": 0,
+        "ipv6-rx-data-pkts": "0",
+        "average-latency": "0",
+        "index": "0",
+        "sla-class-index": "0",
+        "vdevice-host-name": "dc-cedge01",
+        "local-color": "mpls",
+        "app-probe-class": "None",
+        "mean-loss": 0,
+        "vdevice-dataKey": "10.10.1.11-0",
+        "proto": "ipsec",
+        "lastupdated": 1791092642390,
+        "average-jitter": "0",
+        "rx-data-pkts": "0",
+        "ipv6-tx-data-pkts": "0"
+      }
+    },
+    "/dataservice/device/bfd/sessions?deviceId=10.10.1.11": {
+      "count": 12,
+      "keys": [
+        "color",
+        "detect-multiplier",
+        "dst-ip",
+        "dst-port",
+        "lastupdated",
+        "local-color",
+        "proto",
+        "site-id",
+        "src-ip",
+        "src-port",
+        "state",
+        "system-ip",
+        "transitions",
+        "tx-interval",
+        "uptime",
+        "uptime-date",
+        "vdevice-dataKey",
+        "vdevice-host-name",
+        "vdevice-name"
+      ],
+      "sample": {
+        "src-ip": "10.10.23.6",
+        "dst-ip": "10.10.23.10",
+        "color": "mpls",
+        "vdevice-name": "10.10.1.11",
+        "src-port": 12346,
+        "system-ip": "10.10.1.13",
+        "dst-port": 12346,
+        "site-id": 1001,
+        "transitions": 0,
+        "vdevice-host-name": "dc-cedge01",
+        "local-color": "mpls",
+        "uptime": "1:02:15:04",
+        "detect-multiplier": "7",
+        "vdevice-dataKey": "10.10.1.11-mpls-10.10.1.13-mpls-ipsec",
+        "proto": "ipsec",
+        "lastupdated": 1791092644495,
+        "state": "up",
+        "tx-interval": 1000,
+        "uptime-date": 1790998140000
+      }
+    },
+    "/dataservice/device/control/connections?deviceId=10.10.1.11": {
+      "count": 3,
+      "keys": [
+        "behind-proxy",
+        "controller-group-id",
+        "domain-id",
+        "instance",
+        "lastupdated",
+        "local-color",
+        "peer-type",
+        "private-ip",
+        "private-port",
+        "protocol",
+        "public-ip",
+        "public-port",
+        "remote-color",
+        "shared-region-id-set",
+        "site-id",
+        "state",
+        "system-ip",
+        "uptime",
+        "uptime-date",
+        "v-org-name",
+        "vdevice-dataKey",
+        "vdevice-host-name",
+        "vdevice-name"
+      ],
+      "sample": {
+        "domain-id": 1,
+        "instance": 0,
+        "vdevice-name": "10.10.1.11",
+        "behind-proxy": "No",
+        "system-ip": "10.10.1.5",
+        "remote-color": "default",
+        "site-id": 101,
+        "private-port": 12446,
+        "controller-group-id": 0,
+        "vdevice-host-name": "dc-cedge01",
+        "local-color": "mpls",
+        "uptime": "1:02:15:47",
+        "peer-type": "vsmart",
+        "shared-region-id-set": "N/A",
+        "v-org-name": "DevNet Sandbox",
+        "protocol": "dtls",
+        "vdevice-dataKey": "10.10.1.11-0-mpls-10.10.1.5-default",
+        "public-ip": "10.10.20.70",
+        "public-port": 12446,
+        "lastupdated": 1791092646510,
+        "state": "up",
+        "private-ip": "10.10.20.70",
+        "uptime-date": 1790998080000
+      }
+    },
+    "/dataservice/device/app-route/statistics?deviceId=10.10.1.13": {
+      "count": 72,
+      "keys": [
+        "app-probe-class",
+        "average-jitter",
+        "average-latency",
+        "dst-ip",
+        "dst-port",
+        "fallback-sla-class-index",
+        "index",
+        "ipv6-rx-data-pkts",
+        "ipv6-tx-data-pkts",
+        "lastupdated",
+        "local-color",
+        "loss",
+        "mean-jitter",
+        "mean-latency",
+        "mean-loss",
+        "proto",
+        "remote-color",
+        "remote-system-ip",
+        "rx-data-pkts",
+        "sla-class-index",
+        "src-ip",
+        "src-port",
+        "total-packets",
+        "tx-data-pkts",
+        "vdevice-dataKey",
+        "vdevice-host-name",
+        "vdevice-name"
+      ],
+      "sample": {
+        "src-ip": "10.10.23.10",
+        "dst-ip": "10.10.23.6",
+        "tx-data-pkts": "0",
+        "vdevice-name": "10.10.1.13",
+        "src-port": 12346,
+        "dst-port": "12346",
+        "remote-color": "mpls",
+        "remote-system-ip": "10.10.1.11",
+        "fallback-sla-class-index": "None",
+        "mean-latency": 0,
+        "total-packets": "388",
+        "loss": "0",
+        "mean-jitter": 0,
+        "ipv6-rx-data-pkts": "0",
+        "average-latency": "0",
+        "index": "0",
+        "sla-class-index": "0",
+        "vdevice-host-name": "site1-cedge01",
+        "local-color": "mpls",
+        "app-probe-class": "None",
+        "mean-loss": 0,
+        "vdevice-dataKey": "10.10.1.13-0",
+        "proto": "ipsec",
+        "lastupdated": 1791092648613,
+        "average-jitter": "0",
+        "rx-data-pkts": "0",
+        "ipv6-tx-data-pkts": "0"
+      }
+    },
+    "/dataservice/device/bfd/sessions?deviceId=10.10.1.13": {
+      "count": 12,
+      "keys": [
+        "color",
+        "detect-multiplier",
+        "dst-ip",
+        "dst-port",
+        "lastupdated",
+        "local-color",
+        "proto",
+        "site-id",
+        "src-ip",
+        "src-port",
+        "state",
+        "system-ip",
+        "transitions",
+        "tx-interval",
+        "uptime",
+        "uptime-date",
+        "vdevice-dataKey",
+        "vdevice-host-name",
+        "vdevice-name"
+      ],
+      "sample": {
+        "src-ip": "10.10.23.10",
+        "dst-ip": "10.10.23.6",
+        "color": "mpls",
+        "vdevice-name": "10.10.1.13",
+        "src-port": 12346,
+        "system-ip": "10.10.1.11",
+        "dst-port": 12346,
+        "site-id": 100,
+        "transitions": 0,
+        "vdevice-host-name": "site1-cedge01",
+        "local-color": "mpls",
+        "uptime": "1:02:15:11",
+        "detect-multiplier": "7",
+        "vdevice-dataKey": "10.10.1.13-mpls-10.10.1.11-mpls-ipsec",
+        "proto": "ipsec",
+        "lastupdated": 1791092651401,
+        "state": "up",
+        "tx-interval": 1000,
+        "uptime-date": 1790998140000
+      }
+    },
+    "/dataservice/device/control/connections?deviceId=10.10.1.13": {
+      "count": 3,
+      "keys": [
+        "behind-proxy",
+        "controller-group-id",
+        "domain-id",
+        "instance",
+        "lastupdated",
+        "local-color",
+        "peer-type",
+        "private-ip",
+        "private-port",
+        "protocol",
+        "public-ip",
+        "public-port",
+        "remote-color",
+        "shared-region-id-set",
+        "site-id",
+        "state",
+        "system-ip",
+        "uptime",
+        "uptime-date",
+        "v-org-name",
+        "vdevice-dataKey",
+        "vdevice-host-name",
+        "vdevice-name"
+      ],
+      "sample": {
+        "domain-id": 1,
+        "instance": 0,
+        "vdevice-name": "10.10.1.13",
+        "behind-proxy": "No",
+        "system-ip": "10.10.1.5",
+        "remote-color": "default",
+        "site-id": 101,
+        "private-port": 12346,
+        "controller-group-id": 0,
+        "vdevice-host-name": "site1-cedge01",
+        "local-color": "mpls",
+        "uptime": "1:02:16:06",
+        "peer-type": "vsmart",
+        "shared-region-id-set": "N/A",
+        "v-org-name": "DevNet Sandbox",
+        "protocol": "dtls",
+        "vdevice-dataKey": "10.10.1.13-0-mpls-10.10.1.5-default",
+        "public-ip": "10.10.20.70",
+        "public-port": 12346,
+        "lastupdated": 1791092653294,
+        "state": "up",
+        "private-ip": "10.10.20.70",
+        "uptime-date": 1790998080000
+      }
+    },
+    "summary": {
+      "sla": [
+        [
+          "Best-Effort",
+          "500",
+          "5",
+          "500",
+          "system",
+          0
+        ],
+        [
+          "Bulk-Data",
+          "300",
+          "10",
+          "100",
+          "system",
+          0
+        ],
+        [
+          "Business-Critical",
+          "250",
+          "1",
+          "100",
+          "system",
+          0
+        ],
+        [
+          "Business-Data",
+          "350",
+          "3",
+          "200",
+          "system",
+          0
+        ],
+        [
+          "Default",
+          "300",
+          "25",
+          "100",
+          "system",
+          0
+        ],
+        [
+          "Outlook-SLA-Class",
+          "300",
+          "2",
+          "2",
+          "admin",
+          1
+        ],
+        [
+          "Realtime",
+          "150",
+          "1",
+          "30",
+          "system",
+          0
+        ],
+        [
+          "Transactional-Data",
+          "50",
+          "5",
+          "100",
+          "system",
+          0
+        ],
+        [
+          "Voice-And-Video",
+          "45",
+          "2",
+          "100",
+          "system",
+          0
+        ]
+      ],
+      "site_lists": [
+        [
+          "Hub-list",
+          "100",
+          1,
+          "admin"
+        ],
+        [
+          "Spokes-list",
+          "1001-1003",
+          2,
+          "admin"
+        ]
+      ],
+      "vpn_lists": [
+        [
+          "Corp-VPN-List",
+          "1",
+          2,
+          "admin"
+        ]
+      ],
+      "centralized_policies": [
+        [
+          "Corp-vSmart-Policy",
+          false,
+          "appRoute,hubAndSpoke"
+        ]
+      ],
+      "approute_defs": [
+        [
+          "Outlook-AAR-Policy",
+          1,
+          null
+        ]
+      ],
+      "tunnel_quality": [
+        "mpls -> mpls | 36 | 2.3/8.0 | 0.0/1.0 | 3.1/10.0",
+        "mpls -> public-internet | 36 | 23.1/120.0 | 0.1/2.0 | 3.6/11.0",
+        "public-internet -> mpls | 36 | 62.2/128.0 | 0.2/2.0 | 4.1/12.0",
+        "public-internet -> public-internet | 36 | 81.2/128.0 | 0.3/2.0 | 4.2/11.0"
+      ]
+    },
+    "/dataservice/template/policy/definition/approute/fbef9dbe-18de-442a-af74-19926492047c": {
+      "count": 1,
+      "keys": [
+        "definitionId",
+        "description",
+        "infoTag",
+        "isActivatedByVsmart",
+        "lastUpdated",
+        "name",
+        "owner",
+        "referenceCount",
+        "references",
+        "sequences",
+        "type"
+      ],
+      "sample": {
+        "definitionId": "fbef9dbe-18de-442a-af74-19926492047c",
+        "name": "Outlook-AAR-Policy",
+        "type": "appRoute",
+        "description": "Outlook-AAR-Policy",
+        "sequences": [
+          {
+            "sequenceId": 1,
+            "sequenceName": "App Route",
+            "sequenceType": "appRoute",
+            "sequenceIpType": "ipv4",
+            "match": {
+              "entries": [
+                {
+                  "field": "appList",
+                  "ref": "8063c926-e055-4ca6-b5cf-223a6380961c"
+                }
+              ]
+            },
+            "actions": [
+              {
+                "type": "slaClass",
+                "parameter": [
+                  {
+                    "field": "name",
+                    "ref": "76088734-ed24-47e4-a237-f927dc3935a0"
+                  },
+                  {
+                    "field": "preferredColor",
+                    "value": "mpls"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "lastUpdated": 1588969689516,
+        "owner": "admin",
+        "infoTag": "",
+        "referenceCount": 1,
+        "references": [
+          {
+            "id": "7c66e380-d962-4479-b9a3-a22ba40ea1be",
+            "property": "policyId"
+          }
+        ],
+        "isActivatedByVsmart": false
+      }
+    },
+    "/dataservice/template/policy/vsmart/7c66e380-d962-4479-b9a3-a22ba40ea1be": {
+      "error": "GET /dataservice/template/policy/vsmart/7c66e380-d962-4479-b9a3-a22ba40ea1be trả HTTP 405: "
+    },
+    "/dataservice/device/tunnel/statistics?deviceId=10.10.1.11": {
+      "count": 12,
+      "keys": [
+        "dest-ip",
+        "dest-port",
+        "ipv6_rx_octets",
+        "ipv6_rx_pkts",
+        "ipv6_tx_octets",
+        "ipv6_tx_pkts",
+        "lastupdated",
+        "local-color",
+        "remote-color",
+        "rx_octets",
+        "rx_pkts",
+        "source-ip",
+        "source-port",
+        "system-ip",
+        "tcp-mss-adjust",
+        "tunnel-mtu",
+        "tunnel-protocol",
+        "tx_octets",
+        "tx_pkts",
+        "vdevice-dataKey",
+        "vdevice-host-name",
+        "vdevice-name"
+      ],
+      "sample": {
+        "dest-ip": "10.10.23.10",
+        "source-port": 12346,
+        "ipv6_rx_pkts": 0,
+        "vdevice-name": "10.10.1.11",
+        "rx_pkts": 121631,
+        "system-ip": "10.10.1.13",
+        "tcp-mss-adjust": 1358,
+        "remote-color": "mpls",
+        "tx_octets": 11302445,
+        "vdevice-host-name": "dc-cedge01",
+        "tunnel-protocol": "ipsec",
+        "local-color": "mpls",
+        "ipv6_rx_octets": 0,
+        "tx_pkts": 121631,
+        "dest-port": 12346,
+        "vdevice-dataKey": "10.10.1.11-ipsec-10.10.23.6-10.10.23.10-12346-12346",
+        "rx_octets": 13008394,
+        "ipv6_tx_pkts": 0,
+        "tunnel-mtu": 1438,
+        "ipv6_tx_octets": 0,
+        "lastupdated": 1791092655695,
+        "source-ip": "10.10.23.6"
+      }
+    },
+    "/dataservice/device/dpi/application-aggregation?deviceId=10.10.1.11": {
+      "error": "GET /dataservice/device/dpi/application-aggregation trả HTTP 404: "
+    },
+    "/dataservice/device/dpi/summary?deviceId=10.10.1.11": {
+      "count": 1,
+      "keys": [
+        "current-flows",
+        "current-rate",
+        "flows-created",
+        "flows-expired",
+        "lastupdated",
+        "peak-flows",
+        "peak-rate",
+        "status",
+        "vdevice-dataKey",
+        "vdevice-host-name",
+        "vdevice-name"
+      ],
+      "sample": {
+        "flows-expired": "0",
+        "vdevice-dataKey": "10.10.1.11",
+        "flows-created": "0",
+        "vdevice-name": "10.10.1.11",
+        "current-flows": "0",
+        "peak-rate": "0",
+        "current-rate": "0",
+        "lastupdated": 1791092657808,
+        "vdevice-host-name": "dc-cedge01",
+        "status": "disable",
+        "peak-flows": "0"
+      }
+    },
+    "/dataservice/device/app-route/sla-class?deviceId=10.10.1.11": {
+      "count": 1,
+      "keys": [
+        "app-probe-class",
+        "fallback-best-tunnel",
+        "index",
+        "jitter",
+        "lastupdated",
+        "latency",
+        "loss",
+        "name",
+        "vdevice-dataKey",
+        "vdevice-host-name",
+        "vdevice-name"
+      ],
+      "sample": {
+        "app-probe-class": "None",
+        "loss": 0,
+        "fallback-best-tunnel": "None",
+        "jitter": 0,
+        "vdevice-dataKey": "10.10.1.11-0",
+        "vdevice-name": "10.10.1.11",
+        "latency": 0,
+        "name": "__all_tunnels__",
+        "index": 0,
+        "lastupdated": 1791092659803,
+        "vdevice-host-name": "dc-cedge01"
+      }
+    }
+  }
+}
